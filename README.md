@@ -30,8 +30,18 @@ $ node <arquivo>
 Ex.: node server.js
 ```
 
+Executando a aplicação
+
+```
+$ npm run dev
+```
+
 Instalação do pacote nodemon
 ```
 npm install nodemon
 ```
 
+Instalação do express
+```
+npm install express
+```
