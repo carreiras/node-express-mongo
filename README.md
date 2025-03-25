@@ -30,3 +30,8 @@ $ node <arquivo>
 Ex.: node server.js
 ```
 
+Instalação do pacote nodemon
+```
+npm install nodemon
+```
+
