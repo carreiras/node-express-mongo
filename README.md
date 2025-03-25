@@ -21,3 +21,12 @@ Wrote to %PATH%\node-express-mongo\package.json:
   "description": ""
 }
 ```
+
+Executando um arquivo
+
+```
+$ node <arquivo>
+
+Ex.: node server.js
+```
+
