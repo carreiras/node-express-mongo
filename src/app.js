@@ -1,4 +1,18 @@
 import express from "express";
+import conectaNaDatabase from "../config/dbConnect.js";
+
+const conexao = await conectaNaDatabase();
+
+conexao.on("error", (erro) => {
+  console.error("Erro na conexão com o banco de dados!", erro);
+});
+
+
+conexao.once("open", () => {
+  console.log("Banco de dados conectado com sucesso!");
+  // console.log("Servidor rodando na porta 3000");
+  // console.log("http://localhost:3000");
+}); 
 
 const app = express();
 
@@ -47,6 +61,5 @@ app.delete("/livros/:id", (req, res) => {
   livros.splice(livro, 1);
   res.status(204).send("Livro removido com sucesso!");
 });
-
 
 export default app;

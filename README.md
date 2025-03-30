@@ -45,3 +45,13 @@ Instalação do express
 ```
 npm install express
 ```
+
+Instalação do mongodb
+```
+npm install mongodb
+```
+
+Instalação do mongoose
+```
+npm install mongoose
+```
