@@ -55,3 +55,8 @@ Instalação do mongoose
 ```
 npm install mongoose
 ```
+
+Instalação do dotenv
+```
+npm install dotenv
+```

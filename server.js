@@ -1,14 +1,8 @@
-import http from "http";
+import "dotenv/config";
 import app from "./src/app.js";
 
 const PORT = 3000;
 
-const rotas = {
-    "/": "Hello World\n",
-    "/livros": "Lista de livros\n",
-    "/autores": "Lista de autores\n",
-}
-
 app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}/`);
+  console.log(`Server running at http://localhost:${PORT}/`);
 });

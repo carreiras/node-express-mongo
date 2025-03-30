@@ -1,10 +1,7 @@
 import mongoose from "mongoose";
 
 async function conectaNaDatabase() {
-  mongoose.connect(
-    "mongodb+srv://admin:KaaEUUylBDf5egC0@cluster0.i5o2fwd.mongodb.net/livraria?retryWrites=true&w=majority&appName=Cluster0"
-  );
-
+  mongoose.connect(process.env.DB_CONNECTION_STRING);
   return mongoose.connection;
 }
 
