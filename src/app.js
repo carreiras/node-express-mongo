@@ -1,5 +1,6 @@
 import express from "express";
-import conectaNaDatabase from "../config/dbConnect.js";
+import conectaNaDatabase from "./config/dbConnect.js";
+import routes from "./routes/index.js";
 
 const conexao = await conectaNaDatabase();
 
@@ -12,12 +13,7 @@ conexao.once("open", () => {
 });
 
 const app = express();
-
-app.use(express.json());
-
-app.get("/", (req, res) => {
-  res.status(200).send("Hello World\n");
-});
+routes(app);
 
 app.get("/livros/:id", (req, res) => {
   const livro = buscaLivro(req.params.id);
